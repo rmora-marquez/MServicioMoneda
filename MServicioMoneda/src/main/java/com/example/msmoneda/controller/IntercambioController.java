@@ -28,8 +28,10 @@ public class IntercambioController {
 			@PathVariable("destino") String to) {
 		IntercambioMoneda ex = service.findByOrigenADestino(from, to);
 		String puerto = enviroment.getProperty("local.server.port");
-		System.out.println("puerto:" + puerto);
-		ex.setPuerto(Integer.parseInt(puerto));
+		// System.out.println("puerto:" + puerto);
+		if(ex != null)
+			ex.setPuerto(Integer.parseInt(puerto));
+		
 		return ex;
 	}
 
