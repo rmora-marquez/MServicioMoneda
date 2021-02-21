@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MServicioCasaCambioApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MServicioCasaCambioApplication.class, args);
+		SpringApplication app = new SpringApplication(MServicioCasaCambioApplication.class);
+		//SpringApplication.run(MServicioCasaCambioApplication.class, args);
+		app.run(args);
 	}
 
 }
